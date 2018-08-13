@@ -1,61 +1,112 @@
-body {background-color: lavender;}
-.container-fluid, .container {background-color: black; padding: 0px;}
+body {
+    background-color: lavender;
+    
+
+    --green-color: #6ba334;
+    --beige-color: #f5f0ea;
+    --gray-color: #4f5160;
+}
+.container-fluid, .container {background-color: white; padding: 0px;}
 
 /***************************** HEADER *****************************/
 
-#header {
-    background-color: seagreen; color:white; font-weight: bold;
+#header, #header-top, #header-top-left {
     padding: 0px;
 }
 
-#header-top {
-    background-color: blue;
-    padding: 0px;
+#header-top-left img {
+    padding: 0px; margin: 0px;
+    max-width: 50vw; max-height: 15vh; min-height: 20px;
 }
-
-#header-top-left {
-    background-color:  red;
-    padding: 0px;
-}
-#header-top-left img {max-width: 50vw; max-height: 15vh; min-height: 20px;}
 
 #header-top-right {
-    background-color:  orange;
-    padding: 0px;
-    justify-content: center;
+    padding: 0px 20px 0px 0px;
+    text-align: end;
 }
-#date-div {background-color: blueviolet;}
-#number-div {background-color: chartreuse;}
+#date-div {font-weight: bold;}
+#number-div {}
 
-
+#header-bottom {
+    background-color: var(--green-color);
+    color: white;
+    font-size: 2rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
 
 
 /**************************  MAIN  **************************/
 
-#main {
-    background-color: crimson; height: 300px;
+#main { background-color: orangered;
 }
+
+#main-top {background-color: yellow;}
 .article {padding: 15px;}
-.article-image {background-color: chartreuse;}
-.article-content {background-color: darkgoldenrod;}
-
-#main-left {
-    background-color: aqua; 
-    padding: 0vh;
+.article-image {
+    background-color: blue;
+    height: auto; display: block; max-width: 100%;
+    padding: 0px;
 }
-#main-left {}
-#one {background-color: yellow;}
+.article-content {
+    background-color: darkgoldenrod;
+    margin: 0px; padding: 0px; 
+} 
 
-#main-right {
-    background-color: orangered; 
-    padding: 0vh;
+#main-top-left {}
+#one {}
+
+#main-top-right {}
+#two {
 }
-#two {background-color: blueviolet;}
-#three {background-color: darkgreen;}
+#three {}
 
+
+#main-bottom {
+    background-color: greenyellow; 
+}
+.bottom-div {padding: 15px;}
+
+#press-review, #video-div {background-color: sienna;}
 
 
 /**************************  FOOTER  **************************/
 
-#footer {background-color: gray};
+#footer {
+    background-color: beige; 
+    color: white; 
+}
 
+#footer-top {
+    background-color: lightslategray; 
+    padding: 15px; 
+    font-weight: bold;
+}
+
+#footer-bottom {background-color: darkslategray; padding: 15px;}
+#footer-bottom-hr { 
+    padding-bottom: 15px; 
+    padding-top: 10px;
+}
+hr {
+    height: 0px;
+    border-top: 0px var(--gray-color);
+    border-left-color: var(--gray-color);
+    border-right-color: var(--gray-color);
+    border-bottom: 2px solid #717287;
+}
+
+#footer-bottom-down-text { 
+    padding-bottom: 25px;
+}
+
+#footer-bottom-down-link {
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+.article-content {font-size: 15px;}
+@include media-breakpoint-up(md){
+    .article-content {font-size: 5px;}
+}
+
+@media screen and (min-width : ) and (max-width: 34)
