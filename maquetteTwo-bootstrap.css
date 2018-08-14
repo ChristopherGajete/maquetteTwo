@@ -10,6 +10,8 @@ body {
 
 /***************************** HEADER *****************************/
 
+/*#region HEADER*/
+
 #header, #header-top, #header-top-left {
     padding: 0px;
 }
@@ -24,7 +26,6 @@ body {
     text-align: end;
 }
 #date-div {font-weight: bold;}
-#number-div {}
 
 #header-bottom {
     background-color: var(--green-color);
@@ -34,13 +35,20 @@ body {
     padding-bottom: 8px;
 }
 
+/*#endregion*/
+
+
 
 /**************************  MAIN  **************************/
+
+/*#region MAIN*/
 
 #main { background-color: orangered;
 }
 
-#main-top {background-color: yellow;}
+/*#region Main-top*/
+
+#main-top {background-color: var(--beige-color);}
 .article {padding: 15px;}
 .article-image {
     background-color: blue;
@@ -48,28 +56,76 @@ body {
     padding: 0px;
 }
 .article-content {
-    background-color: darkgoldenrod;
+    background-color: white;
     margin: 0px; padding: 0px; 
 } 
-
-#main-top-left {}
-#one {}
-
-#main-top-right {}
-#two {
+.article-content-head, .article-content-text, .article-content-link {
+    font-size: 0.8rem;
 }
-#three {}
+.article-content-title {
+    font-size: 1.1rem;
+}
+.article-content-head, .article-content-title, .article-content-text {
+    margin-bottom: 10px;
+}
+.article-content-head, .article-content-link {
+    font-weight: bold;
+    color: var(--green-color);
+}
 
+.article-content-head {padding-top: 15px;}
+.article-content-link {padding-bottom: 15px;}
 
+/*#endregion*/
+
+/*#region Main-bottom*/
 #main-bottom {
-    background-color: greenyellow; 
+    background-color: white; 
 }
 .bottom-div {padding: 15px;}
 
-#press-review, #video-div {background-color: sienna;}
+#pressReview, #videoDiv {background-color: var(--beige-color); padding: 20px;}
+
+#pressReview-content-title {
+    padding: 0px 0px 20px 0px; 
+    font-weight: bolder;
+    font-size: 1rem;
+}
+#pressReview-content-text {
+    padding: 0px; 
+    font-size: 0.8rem;
+}
+
+#pressReview-content-text #pi {
+    margin-bottom: 0px;
+}
+
+#pressReview-content-links {
+    padding: 0px;
+}
+#pressReview-content-links .col-lg-6 {
+    text-decoration: underline;
+    font-size: 0.8rem;
+    margin-top: 18px;
+    height: auto;
+}
+#videoDiv-content-title {
+    color: var(--green-color);
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+iframe {height: 100%; width: auto;}
+/*#endregion*/
+
+
+/*#endregion*/
 
 
 /**************************  FOOTER  **************************/
+
+
+/*#region FOOTER*/
 
 #footer {
     background-color: beige; 
@@ -77,15 +133,31 @@ body {
 }
 
 #footer-top {
-    background-color: lightslategray; 
-    padding: 15px; 
-    font-weight: bold;
+    background-color: var(--green-color); 
+    font-size: 1rem;
+    padding: 15px 0px 25px 0px;
 }
 
-#footer-bottom {background-color: darkslategray; padding: 15px;}
+#footer-top-left {
+    font-weight: bold;
+    padding-left: 15px;
+    margin: 10px 0px 0px 0px;
+}
+#footer-top-right {
+    padding-right: 15px;
+    margin: 10px 0px 0px 0px;
+}
+i {margin-left: 8px; margin-right: 8px;}
+
+#footer-bottom {background-color: var(--gray-color); padding: 15px;}
+
+#footer-bottom-up {
+    font-size: 0.9rem;
+}
+
 #footer-bottom-hr { 
-    padding-bottom: 15px; 
-    padding-top: 10px;
+    padding-bottom: 5px; 
+    padding-top: 0px;
 }
 hr {
     height: 0px;
@@ -96,17 +168,23 @@ hr {
 }
 
 #footer-bottom-down-text { 
-    padding-bottom: 25px;
+    padding-bottom: 10px;
+    font-size: 0.8rem;
 }
 
 #footer-bottom-down-link {
     padding-bottom: 10px;
     text-decoration: underline;
+    font-size: 0.9rem;
 }
 
-.article-content {font-size: 15px;}
+/*#endregion*/
+
+
+/***********************  MEDIA-QUERIES  ***********************/
+
 @include media-breakpoint-up(md){
     .article-content {font-size: 5px;}
 }
 
-@media screen and (min-width : ) and (max-width: 34)
+@media screen and (min-width : ) and (max-width: )
