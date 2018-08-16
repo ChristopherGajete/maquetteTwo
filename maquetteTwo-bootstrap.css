@@ -1,6 +1,5 @@
 body {
     background-color: lavender;
-    
 
     --green-color: #6ba334;
     --beige-color: #f5f0ea;
@@ -43,16 +42,18 @@ body {
 
 /*#region MAIN*/
 
-#main { background-color: orangered;
-}
-
 /*#region Main-top*/
 
 #main-top {background-color: var(--beige-color);}
 .article {padding: 15px;}
 .article-image {
-    background-color: blue;
-    height: auto; display: block; max-width: 100%;
+    background-color: chartreuse;
+    overflow: hidden; 
+}
+.article-image-img {
+    display: block; 
+    max-width: 100%;
+    height: auto;
     padding: 0px;
 }
 .article-content {
@@ -75,6 +76,7 @@ body {
 
 .article-content-head {padding-top: 15px;}
 .article-content-link {padding-bottom: 15px;}
+
 
 /*#endregion*/
 
